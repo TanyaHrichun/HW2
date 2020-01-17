@@ -9,11 +9,11 @@
     <script>
         var yearsOld = +prompt ('How old are you?');
         if (yearsOld % 10 == 1 ) {
-            alert ('Тебе' + yearsOld + 'год.');
-        } else if  (yearsOld % 10 >= 5 || yearsOld % 10 == 0) {
-            alert('Тебе ' + yearsOld + ' лет.');
+            alert ('Тебе ' + yearsOld + ' год. ');
+        } else if  (yearsOld % 10 >= 5 || yearsOld % 10 == 0 || yearsOld % 100 >=4) {
+            alert('Тебе ' + yearsOld + ' лет. ');
         } else if (yearsOld % 10 <= 9 ) {
-            alert('Тебе ' + yearsOld + ' года.');
+            alert('Тебе ' + yearsOld + ' года. ');
         }
     </script>
 </body>
