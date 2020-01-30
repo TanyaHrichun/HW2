@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age = prompt('Введите ваш возраст?');
+        test();
+        function test() {
+            if (!isNaN(age)) {
+            if(age > 0) {
+        var lastChar = age[age.length - 1];
+        var firstChar = age[0];
+        var rule1;
+            if (age.length > 1) {
+                rule1 = age[age.length - 2] + age[age.length - 1];  
+            }
+            switch(true) {
+                case (firstChar == 0):
+            age = prompt('Введите адекватное число!');
+            test();  
+                break;
+            case (rule1 > 10 && rule1 < 15):
+                return alert('Вам ' + age + ' лет');  
+                break;
+            case (lastChar == 1):  
+                return alert('Вам ' + age + ' год');  
+                break;
+            case (lastChar > 1 && lastChar < 5): 
+                return alert('Вам ' + age + ' года');  
+                break;
+            default:
+                return alert('Вам ' + age + ' лет'); 
+                break;
+                }
+            }
+            else {
+            age = prompt('Введите число больше нуля!');
+            test();  
+            }
+        }
+        else {
+            age = prompt('Введите число!');
+            test();
+            }
+        }   
+    </script>
+</body>
+</html>
